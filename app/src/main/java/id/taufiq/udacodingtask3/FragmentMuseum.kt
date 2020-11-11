@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 
 
 class FragmentMuseum : Fragment() {
@@ -16,6 +17,14 @@ class FragmentMuseum : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_museum, container, false)
+
+
     }
 
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        Toast.makeText(context, "museum fragment", Toast.LENGTH_SHORT).show()
+    }
 }
