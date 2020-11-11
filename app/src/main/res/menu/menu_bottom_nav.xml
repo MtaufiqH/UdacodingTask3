@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/batikFragment"
+        android:title="@string/batik"
+        android:icon="@drawable/ic_batik"/>
+
+    <item
+        android:id="@+id/fragmentMuseum"
+        android:title="@string/museum"
+        android:icon="@drawable/ic_museum"/>
+
+    <item
+        android:id="@+id/fragmentDaerah"
+        android:title="@string/daerah"
+        android:icon="@drawable/ic_daerah"/>
+
+    <item
+        android:id="@+id/fragmentCovid"
+        android:title="@string/covid19"
+        android:icon="@drawable/ic_healing"/>
+
+</menu>

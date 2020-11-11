@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">UdacodingTask3</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="batik">Batik</string>
+    <string name="museum">Museum</string>
+    <string name="daerah">Daerah</string>
+    <string name="covid19">Covid19</string>
+</resources>
