@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/batikFragment"
-        android:name="id.taufiq.udacodingtask3.BatikFragment"
+        android:name="id.taufiq.udacodingtask3.view.BatikFragment"
         android:label="fragment_batik"
         tools:layout="@layout/fragment_batik" />
     <fragment
         android:id="@+id/fragmentMuseum"
-        android:name="id.taufiq.udacodingtask3.FragmentMuseum"
+        android:name="id.taufiq.udacodingtask3.view.FragmentMuseum"
         android:label="fragment_museum"
         tools:layout="@layout/fragment_museum" />
     <fragment
         android:id="@+id/fragmentDaerah"
-        android:name="id.taufiq.udacodingtask3.FragmentDaerah"
+        android:name="id.taufiq.udacodingtask3.view.FragmentDaerah"
         android:label="fragment_daerah"
         tools:layout="@layout/fragment_daerah" />
     <fragment
         android:id="@+id/fragmentCovid"
-        android:name="id.taufiq.udacodingtask3.FragmentCovid"
+        android:name="id.taufiq.udacodingtask3.view.FragmentCovid"
         android:label="fragment_covid"
         tools:layout="@layout/fragment_covid" />
 </navigation>
