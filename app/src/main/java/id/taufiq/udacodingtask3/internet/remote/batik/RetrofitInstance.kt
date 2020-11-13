@@ -1,5 +1,6 @@
-package id.taufiq.udacodingtask3.data.remote
+package id.taufiq.udacodingtask3.internet.remote.batik
 
+import id.taufiq.udacodingtask3.internet.remote.URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

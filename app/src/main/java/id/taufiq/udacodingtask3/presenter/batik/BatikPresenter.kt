@@ -1,6 +1,6 @@
-package id.taufiq.udacodingtask3.presenter
+package id.taufiq.udacodingtask3.presenter.batik
 
-import id.taufiq.udacodingtask3.data.remote.RetrofitInstance
+import id.taufiq.udacodingtask3.internet.remote.batik.RetrofitInstance
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

@@ -1,4 +1,4 @@
-package id.taufiq.udacodingtask3.data.response.batik
+package id.taufiq.udacodingtask3.internet.response.batik
 
 data class Hasil(
     val daerah_batik: String,

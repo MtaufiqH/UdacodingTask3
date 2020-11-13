@@ -8,40 +8,38 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import id.taufiq.udacodingtask3.R
 import id.taufiq.udacodingtask3.internet.response.batik.Hasil
+import id.taufiq.udacodingtask3.internet.response.museum.Data
 import kotlinx.android.synthetic.main.batik_row.view.*
 
 /**
  * Created By Taufiq on 11/12/2020.
  *
  */
-class BatikAdapter(private val data: List<Hasil>, private val listener: (Hasil) -> Unit) :
-    RecyclerView.Adapter<BatikAdapter.BatikViewHolder>() {
+class MuseumAdapter(private val data: List<Data>, private val listener: (Data) -> Unit) :
+    RecyclerView.Adapter<MuseumAdapter.MuseumViewHolder>() {
 
     val context: Context? = null
 
-    class BatikViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun binding(data: Hasil, listener: (Hasil) -> Unit) {
+    class MuseumViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun binding(data: Data, listener: (Data) -> Unit) {
 
             with(itemView) {
-                tv_nama_batik.text = data.nama_batik
-                iv_gambar_batik.load(data.link_batik){
-                    this.crossfade(true)
-                    this.placeholder(R.drawable.ic_baseline_image_24)
-                }
+
                 setOnClickListener { listener(data) }
+
+                }
             }
 
         }
-    }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BatikViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MuseumViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.batik_row, parent, false)
 
-        return BatikViewHolder(view)
+        return MuseumViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: BatikViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MuseumViewHolder, position: Int) {
         holder.binding(data[position], listener)
     }
 

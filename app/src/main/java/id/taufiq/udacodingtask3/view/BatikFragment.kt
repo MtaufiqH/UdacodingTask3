@@ -10,9 +10,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import id.taufiq.udacodingtask3.R
 import id.taufiq.udacodingtask3.adapter.BatikAdapter
-import id.taufiq.udacodingtask3.data.response.batik.Hasil
-import id.taufiq.udacodingtask3.presenter.BatikPresenter
-import id.taufiq.udacodingtask3.presenter.BatikView
+import id.taufiq.udacodingtask3.internet.response.batik.Hasil
+import id.taufiq.udacodingtask3.presenter.batik.BatikPresenter
+import id.taufiq.udacodingtask3.presenter.batik.BatikView
 import kotlinx.android.synthetic.main.fragment_batik.*
 
 

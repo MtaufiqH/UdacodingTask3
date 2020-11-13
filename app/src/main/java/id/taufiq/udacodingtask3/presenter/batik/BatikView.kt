@@ -1,7 +1,6 @@
-package id.taufiq.udacodingtask3.presenter
+package id.taufiq.udacodingtask3.presenter.batik
 
-import id.taufiq.udacodingtask3.data.response.batik.Batiks
-import id.taufiq.udacodingtask3.data.response.batik.Hasil
+import id.taufiq.udacodingtask3.internet.response.batik.Hasil
 
 /**
  * Created By Taufiq on 11/12/2020.

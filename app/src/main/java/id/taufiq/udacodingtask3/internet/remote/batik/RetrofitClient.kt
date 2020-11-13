@@ -1,7 +1,6 @@
-package id.taufiq.udacodingtask3.data.remote
+package id.taufiq.udacodingtask3.internet.remote.batik
 
-import id.taufiq.udacodingtask3.data.response.batik.Batiks
-import id.taufiq.udacodingtask3.data.response.batik.Hasil
+import id.taufiq.udacodingtask3.internet.response.batik.Batiks
 import retrofit2.Response
 import retrofit2.http.GET
 
