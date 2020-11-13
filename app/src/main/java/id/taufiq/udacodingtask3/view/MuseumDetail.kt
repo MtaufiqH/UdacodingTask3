@@ -26,7 +26,7 @@ class MuseumDetail : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         with(args.MuseumData) {
-            tv_nama_batik_detail.text = nama
+            nama_museum_detail.text = nama
             provinsi_museum_detail.text = propinsi
             tv_alamat.text = alamatJalan
             tv_kota.text = kabupatenKota

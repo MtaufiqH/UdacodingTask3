@@ -29,7 +29,7 @@ class CovidDetail : Fragment() {
 
         with(args.CovidData) {
             tv_key_provins.text = key
-            tv_dirawat.text = "$jumlahDirawat orang"
+            tv_dirawat.text = "$jumlahDirawat dirawat"
             tv_kasus.text = "$jumlahKasus orang"
             tv_meninggal.text = "$jumlahMeninggal orang"
             tv_sembuh.text = "$jumlahSembuh orang"
