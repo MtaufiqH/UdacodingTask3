@@ -12,4 +12,7 @@
     <string name="batik_indonesia">Batik Indonesia</string>
     <string name="explore_nindonesiaku">Explore\nIndonesiaku</string>
     <string name="mengexplore_keindahan_dan_keragaman_nbudaya_indonesiaku">Mengexplore keindahan dan keragaman\nbudaya Indonesiaku</string>
+    <string name="provinsi_indonesia">Provinsi Indonesia</string>
+    <string name="explore_image">explore image</string>
+    <string name="data_covid_per_provinsi">Data Covid per Provinsi</string>
 </resources>

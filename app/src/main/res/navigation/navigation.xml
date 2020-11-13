@@ -9,12 +9,24 @@
         android:id="@+id/batikFragment"
         android:name="id.taufiq.udacodingtask3.view.BatikFragment"
         android:label="fragment_batik"
-        tools:layout="@layout/fragment_batik" />
+        tools:layout="@layout/fragment_batik" >
+        <action
+            android:id="@+id/action_batikFragment_to_batikDetail"
+            app:destination="@id/batikDetail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentMuseum"
         android:name="id.taufiq.udacodingtask3.view.FragmentMuseum"
         android:label="fragment_museum"
-        tools:layout="@layout/fragment_museum" />
+        tools:layout="@layout/fragment_museum" >
+        <action
+            android:id="@+id/action_fragmentMuseum_to_museumDetail"
+            app:destination="@id/museumDetail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentDaerah"
         android:name="id.taufiq.udacodingtask3.view.FragmentDaerah"
@@ -24,5 +36,31 @@
         android:id="@+id/fragmentCovid"
         android:name="id.taufiq.udacodingtask3.view.FragmentCovid"
         android:label="fragment_covid"
-        tools:layout="@layout/fragment_covid" />
+        tools:layout="@layout/fragment_covid" >
+        <action
+            android:id="@+id/action_fragmentCovid_to_covidDetail"
+            app:destination="@id/covidDetail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/batikDetail"
+        android:name="id.taufiq.udacodingtask3.BatikDetail"
+        android:label="fragment_batik_detail"
+        tools:layout="@layout/fragment_batik_detail" />
+    <fragment
+        android:id="@+id/covidDetail"
+        android:name="id.taufiq.udacodingtask3.CovidDetail"
+        android:label="fragment_covid_detail"
+        tools:layout="@layout/fragment_covid_detail" />
+    <fragment
+        android:id="@+id/museumDetail"
+        android:name="id.taufiq.udacodingtask3.MuseumDetail"
+        android:label="fragment_museum_detail"
+        tools:layout="@layout/fragment_museum_detail" />
+    <activity
+        android:id="@+id/openingActivity"
+        android:name="id.taufiq.udacodingtask3.OpeningActivity"
+        android:label="activity_opening"
+        tools:layout="@layout/activity_opening" />
 </navigation>

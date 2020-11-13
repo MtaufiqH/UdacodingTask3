@@ -1,6 +1,6 @@
-package id.taufiq.udacodingtask3.presenter.museum
+package id.taufiq.udacodingtask3.presenter.daerah
 
-import id.taufiq.udacodingtask3.internet.remote.museum.RetrofitInstanceMuseum
+import id.taufiq.udacodingtask3.internet.remote.daerah.RetrofitInstanceDaerah
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -9,13 +9,13 @@ import kotlinx.coroutines.launch
  * Created By Taufiq on 11/12/2020.
  *
  */
-class MuseumPresenter(val view: MuseumView) {
-    fun getMuseum() {
+class DaerahPresenter(val view: DaerahView) {
+    fun getDaerah() {
         CoroutineScope(Dispatchers.Main).launch {
-            val response = RetrofitInstanceMuseum.buildApiService().getMuseum()
+            val response = RetrofitInstanceDaerah.buildApiService().getDaerah()
             if (response.isSuccessful) {
                 view.hideProgress()
-                view.onSuccess(response.body()!!.mdata)
+                view.onSuccess(response.body()!!.provinsi)
             } else {
                 view.hideProgress()
                 view.onFailure(response.message())

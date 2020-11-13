@@ -16,7 +16,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/idku" />
+        app:srcCompat="@drawable/idku"
+        android:contentDescription="@string/explore_image" />
 
     <View
         android:layout_width="match_parent"
@@ -30,8 +31,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="340dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/explore_nindonesiaku"

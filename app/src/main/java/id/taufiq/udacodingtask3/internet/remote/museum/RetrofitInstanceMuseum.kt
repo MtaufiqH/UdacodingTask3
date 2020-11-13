@@ -5,6 +5,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 
 /**
  * Created By Taufiq on 11/12/2020.
@@ -13,16 +14,19 @@ import retrofit2.converter.gson.GsonConverterFactory
 class RetrofitInstanceMuseum {
 
     companion object {
-        private val interceptor = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+        private val interceptor =
+            HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
 
-        private fun buildClient(): OkHttpClient =
-            OkHttpClient.Builder()
-                .addInterceptor(interceptor)
-                .build()
+        private val buildClient: OkHttpClient = OkHttpClient.Builder()
+            .addInterceptor(interceptor)
+            .connectTimeout(30, TimeUnit.SECONDS)
+            .readTimeout(30, TimeUnit.SECONDS)
+            .build()
+
 
         private fun buildRetrofit(): Retrofit {
             return Retrofit.Builder()
-                .client(buildClient())
+                .client(buildClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl(URL.MUSEUM_URL)
                 .build()

@@ -35,7 +35,6 @@ class BatikFragment : Fragment(), BatikView {
 
         presenter = BatikPresenter(this)
         presenter!!.getBatik()
-        Toast.makeText(context, "batik fragment", Toast.LENGTH_SHORT).show()
 
 
     }
