@@ -8,7 +8,11 @@
 
 ## Tools or Libraries
 * Retrofit
-* Coroutine
+* Kotlin Coroutine
+* Logging Interceptor
+* OkHTTP3
+* Material Design
+* Recyclerview
 * Navigation Component
 * Coil
 * MVP Pattern
