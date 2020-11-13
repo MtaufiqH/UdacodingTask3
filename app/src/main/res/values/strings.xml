@@ -17,4 +17,6 @@
     <string name="data_covid_per_provinsi">Data Covid per Provinsi</string>
     <string name="cari_museum">cari Museum</string>
     <string name="cari">Cari</string>
+    <string name="harga_rendah">Harga Rendah</string>
+    <string name="harga_tinggi">Harga Tinggi</string>
 </resources>
