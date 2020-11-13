@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.taufiq.udacodingtask3.R
 import id.taufiq.udacodingtask3.adapter.CovidAdapter
@@ -40,7 +41,9 @@ class FragmentCovid : Fragment(),CovidView {
 
     override fun onSuccess(data: List<Data>) {
         rv_covid.layoutManager = LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false)
-        rv_covid.adapter = CovidAdapter(data){
+        rv_covid.adapter = CovidAdapter(data){resultCovid ->
+            val action = FragmentCovidDirections.actionFragmentCovidToCovidDetail(resultCovid)
+            findNavController().navigate(action)
 
         }
     }

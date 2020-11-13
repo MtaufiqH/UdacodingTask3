@@ -14,6 +14,7 @@ class OpeningActivity : AppCompatActivity() {
         btn_explore.setOnClickListener {
             startActivity(Intent(this,MainActivity::class.java))
             overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
+            finishAffinity()
         }
     }
 }

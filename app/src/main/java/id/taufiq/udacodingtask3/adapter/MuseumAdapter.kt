@@ -4,8 +4,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Filter
-import android.widget.Filterable
 import androidx.recyclerview.widget.RecyclerView
 import id.taufiq.udacodingtask3.R
 import id.taufiq.udacodingtask3.internet.response.museum.Data
@@ -15,10 +13,9 @@ import kotlinx.android.synthetic.main.museum_row.view.*
  * Created By Taufiq on 11/12/2020.
  *
  */
-class MuseumAdapter(private val data: List<Data>, private val listener: (Data) -> Unit) :
-    RecyclerView.Adapter<MuseumAdapter.MuseumViewHolder>(), Filterable {
+class MuseumAdapter(private var data: List<Data>, private val listener: (Data) -> Unit) :
+    RecyclerView.Adapter<MuseumAdapter.MuseumViewHolder>() {
 
-    var museumFilterList : List<Data>? = null
     val context: Context? = null
 
 
@@ -48,32 +45,6 @@ class MuseumAdapter(private val data: List<Data>, private val listener: (Data) -
 
     override fun getItemCount(): Int = data.size
 
-
-    override fun getFilter(): Filter {
-        return object : Filter() {
-            override fun performFiltering(constraints: CharSequence?): FilterResults {
-                val charSearch = constraints.toString()
-                if (charSearch.isEmpty()) {
-                    museumFilterList = data
-                } else {
-                    val resultList = ArrayList<Data>()
-                    for (row in data) {
-                        resultList.add(row)
-                    }
-                    museumFilterList = resultList
-                }
-                val filterResults = FilterResults()
-                filterResults.values = museumFilterList
-                return filterResults
-            }
-
-            override fun publishResults(constraints: CharSequence?, result: FilterResults?) {
-                museumFilterList = result?.values as ArrayList<Data>
-                notifyDataSetChanged()
-            }
-
-        }
-    }
 
 
 }

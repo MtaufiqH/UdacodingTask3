@@ -45,19 +45,52 @@
     </fragment>
     <fragment
         android:id="@+id/batikDetail"
-        android:name="id.taufiq.udacodingtask3.BatikDetail"
+        android:name="id.taufiq.udacodingtask3.view.BatikDetail"
         android:label="fragment_batik_detail"
-        tools:layout="@layout/fragment_batik_detail" />
+        tools:layout="@layout/fragment_batik_detail" >
+        <action
+            android:id="@+id/action_batikDetail_to_batikFragment"
+            app:destination="@id/batikFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="BatikData"
+            app:argType="id.taufiq.udacodingtask3.internet.response.batik.Hasil" />
+    </fragment>
     <fragment
         android:id="@+id/covidDetail"
-        android:name="id.taufiq.udacodingtask3.CovidDetail"
+        android:name="id.taufiq.udacodingtask3.view.CovidDetail"
         android:label="fragment_covid_detail"
-        tools:layout="@layout/fragment_covid_detail" />
+        tools:layout="@layout/fragment_covid_detail" >
+        <action
+            android:id="@+id/action_covidDetail_to_fragmentCovid"
+            app:destination="@id/fragmentCovid"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="CovidData"
+            app:argType="id.taufiq.udacodingtask3.internet.response.covid.Data" />
+    </fragment>
     <fragment
         android:id="@+id/museumDetail"
-        android:name="id.taufiq.udacodingtask3.MuseumDetail"
+        android:name="id.taufiq.udacodingtask3.view.MuseumDetail"
         android:label="fragment_museum_detail"
-        tools:layout="@layout/fragment_museum_detail" />
+        tools:layout="@layout/fragment_museum_detail" >
+        <action
+            android:id="@+id/action_museumDetail_to_fragmentMuseum"
+            app:destination="@id/fragmentMuseum"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="MuseumData"
+            app:argType="id.taufiq.udacodingtask3.internet.response.museum.Data" />
+    </fragment>
     <activity
         android:id="@+id/openingActivity"
         android:name="id.taufiq.udacodingtask3.OpeningActivity"

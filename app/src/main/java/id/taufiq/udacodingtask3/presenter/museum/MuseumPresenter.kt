@@ -12,6 +12,7 @@ import kotlinx.coroutines.launch
 class MuseumPresenter(val view: MuseumView) {
     fun getMuseum() {
         CoroutineScope(Dispatchers.Main).launch {
+            view.showProgress()
             val response = RetrofitInstanceMuseum.buildApiService().getMuseum()
             if (response.isSuccessful) {
                 view.hideProgress()
@@ -19,6 +20,22 @@ class MuseumPresenter(val view: MuseumView) {
             } else {
                 view.hideProgress()
                 view.onFailure(response.message())
+            }
+        }
+
+
+    }
+
+    fun getbyMuseumName(name: String) {
+        CoroutineScope(Dispatchers.Main).launch {
+            val mResponse = RetrofitInstanceMuseum.buildApiService().getbyNameMuseum(name)
+
+            if (mResponse.isSuccessful){
+                view.hideProgress()
+                view.onSuccess(mResponse.body()!!.mdata)
+            }else{
+                view.hideProgress()
+                view.onFailure(mResponse.message())
             }
         }
 

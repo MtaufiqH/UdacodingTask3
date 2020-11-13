@@ -1,8 +1,11 @@
 package id.taufiq.udacodingtask3.internet.response.museum
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Data(
     @SerializedName("alamat_jalan")
     val alamatJalan: String,
@@ -37,11 +40,11 @@ data class Data(
     @SerializedName("standar")
     val standar: String,
     @SerializedName("status_kepemilikan")
-    val statusKepemilikan: Any,
+    val statusKepemilikan: String,
     @SerializedName("sumber_dana")
     val sumberDana: String,
     @SerializedName("tahun_berdiri")
     val tahunBerdiri: String,
     @SerializedName("tipe")
     val tipe: String
-)
+) : Parcelable

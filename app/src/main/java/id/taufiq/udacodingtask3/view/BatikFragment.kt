@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import id.taufiq.udacodingtask3.R
 import id.taufiq.udacodingtask3.adapter.BatikAdapter
@@ -56,6 +57,9 @@ class BatikFragment : Fragment(), BatikView {
         rv_batik.adapter =
             BatikAdapter(data) {
 
+                val action = BatikFragmentDirections.actionBatikFragmentToBatikDetail(it)
+                findNavController().navigate(action)
+
             }
     }
 
@@ -67,6 +71,8 @@ class BatikFragment : Fragment(), BatikView {
     override fun hideProgress() {
         progress_id.visibility = View.INVISIBLE
     }
+
+
 
 
 }

@@ -10,4 +10,5 @@ interface MuseumView {
     fun onSuccess(data: List<Data>)
     fun onFailure(message: String)
     fun hideProgress()
+    fun showProgress()
 }

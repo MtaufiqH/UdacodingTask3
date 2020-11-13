@@ -5,8 +5,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SearchView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.taufiq.udacodingtask3.R
@@ -19,11 +19,11 @@ import kotlinx.android.synthetic.main.fragment_museum.*
 
 class FragmentMuseum : Fragment(), MuseumView {
 
-    companion object{
+    companion object {
         private const val TAG = "FragmentMuseum"
     }
 
-    private var adapter: MuseumAdapter? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -40,21 +40,10 @@ class FragmentMuseum : Fragment(), MuseumView {
         val presenter = MuseumPresenter(this)
         presenter.getMuseum()
 
-
-        et_search_museum.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
-            androidx.appcompat.widget.SearchView.OnQueryTextListener {
-
-            override fun onQueryTextSubmit(p0: String?): Boolean {
-                return false
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-                adapter?.filter?.filter(newText)
-                return false
-            }
-
-        })
-
+        btn_cari.setOnClickListener {
+            val textName = et_search_museum.text.toString()
+            presenter.getbyMuseumName(textName)
+        }
 
     }
 
@@ -62,6 +51,9 @@ class FragmentMuseum : Fragment(), MuseumView {
         // setup recyclerview
         rv_museum.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         rv_museum.adapter = MuseumAdapter(data) {
+
+            val action = FragmentMuseumDirections.actionFragmentMuseumToMuseumDetail(it)
+            findNavController().navigate(action)
 
         }
         rv_museum.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
@@ -75,5 +67,9 @@ class FragmentMuseum : Fragment(), MuseumView {
 
     override fun hideProgress() {
         progress_circular.visibility = View.INVISIBLE
+    }
+
+    override fun showProgress() {
+        progress_circular.visibility = View.VISIBLE
     }
 }

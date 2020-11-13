@@ -7,7 +7,7 @@
     tools:context=".view.FragmentMuseum">
 
 
-    <androidx.appcompat.widget.SearchView
+    <EditText
         android:id="@+id/et_search_museum"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -17,24 +17,25 @@
         android:background="@drawable/bg_search"
         android:drawableStart="@drawable/ic_baseline_search_24"
         android:drawablePadding="8dp"
+        android:hint="@string/cari_museum"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_museum"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_search_museum" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_cari" />
 
     <ProgressBar
         android:id="@+id/progress_circular"
@@ -44,4 +45,28 @@
         app:layout_constraintEnd_toEndOf="@+id/rv_museum"
         app:layout_constraintStart_toStartOf="@+id/rv_museum"
         app:layout_constraintTop_toTopOf="@+id/rv_museum" />
+
+    <Button
+        android:id="@+id/btn_cari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/cari"
+        app:layout_constraintEnd_toEndOf="@+id/et_search_museum"
+        app:layout_constraintStart_toStartOf="@+id/et_search_museum"
+        app:layout_constraintTop_toBottomOf="@+id/et_search_museum" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Museum Indonesia"
+        android:textColor="@color/black_color"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
