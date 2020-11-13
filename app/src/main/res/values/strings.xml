@@ -23,4 +23,6 @@
     <string name="pengelola">Pengelola</string>
     <string name="alamat">Alamat</string>
     <string name="tahun_berdiri">Tahun Berdiri:</string>
+    <string name="sembuh">Sembuh</string>
+    <string name="meninggal">Meninggal</string>
 </resources>
