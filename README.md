@@ -1,4 +1,6 @@
 # Explore Indonesiaku
+
+## About App
     Project ini merupakan portofolio submission Udacoding Mentoring yang diwajibkan get data dari internet dengan beberapa API yang telah disiapkan oleh facilitator
 
 ## Android Studio as your main IDE
@@ -22,5 +24,5 @@ This project is mantained by:
 * [M. Taufiq Hidayat](http://github.com/MtaufiqH)
 
 
-## Thanks to Udacoding
+### Thanks to Udacoding
 
